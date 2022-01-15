@@ -1,6 +1,6 @@
-const siteData = require('./data/site.json');
+const siteData = require("./data/site.json");
 
 module.exports = {
-	siteUrl: siteData.url,
-	generateRobotsTxt: true
+  siteUrl: siteData.url,
+  generateRobotsTxt: true
 };

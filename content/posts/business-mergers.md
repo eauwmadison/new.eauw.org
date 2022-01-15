@@ -21,18 +21,17 @@ Achieving acquisition success has proven to be very difficult, while various stu
 
 The combined evidence suggests that the shareholders of acquired firms realize significant positive "abnormal returns" while shareholders of the acquiring company are most likely to experience a negative wealth effect. The overall net effect of M&A transactions appears to be positive: almost all studies report positive returns for the investors in the combined buyer and target firms. This implies that M&A creates economic value, presumably by transferring assets to management teams that operate them more efficiently (see Douma & Schreuder, 2013, chapter 13).
 
-
 <img src="https://unsplash.it/960/350?image=864" width="960" height="350" alt="Placeholder image">
 
 ### Business valuation
 
 The five most common ways to value a business are
 
-* asset valuation,
-* historical earnings valuation,
-* future maintainable earnings valuation,
-* relative valuation (comparable company and comparable transactions),
-* discounted cash flow (DCF) valuation
+- asset valuation,
+- historical earnings valuation,
+- future maintainable earnings valuation,
+- relative valuation (comparable company and comparable transactions),
+- discounted cash flow (DCF) valuation
 
 Professionals who value businesses generally do not use just one of these methods but a combination of some of them, as well as possibly others that are not mentioned above, in order to obtain a more accurate value. The information in the balance sheet or income statement is obtained by one of three accounting measures: a Notice to Reader, a Review Engagement or an Audit.
 

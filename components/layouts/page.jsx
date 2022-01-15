@@ -1,17 +1,17 @@
-import DefaultLayout from './default';
+import DefaultLayout from "./default";
 
 export default function PageLayout({ children, page }) {
-	return (
-		<DefaultLayout page={page}>
-			<div className="page-header">
-				<h2>{page.title}</h2>
-			</div>
+  return (
+    <DefaultLayout page={page}>
+      <div className="page-header">
+        <h2>{page.title}</h2>
+      </div>
 
-			<article className="content">
-				<div dangerouslySetInnerHTML={{ __html: page.content_html }} />
+      <article className="content">
+        <div dangerouslySetInnerHTML={{ __html: page.content_html }} />
 
-				{children}
-			</article>
-		</DefaultLayout>
-	);
+        {children}
+      </article>
+    </DefaultLayout>
+  );
 }

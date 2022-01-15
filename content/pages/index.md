@@ -26,4 +26,3 @@ content_html: >-
   professional representation. Practicing for over 50 years, our team have the
   knowledge and skills to get you results.</p>
 ---
-
