@@ -1,18 +1,16 @@
-# Justice
+# Effective Altruism UW–Madison Website
 
-Law firm themed business template for Next.js. Browse through a
-[live demo](https://mysterious-shelter.cloudvent.net/). Increase the web presence of a law firm or
-business with this configurable theme.
+An Effective Altruism website built with Next.js. Browse through a
+[live demo](https://haloed-coal.cloudvent.net/). Any other EA organizations are welcome to use this template.
 
-![Justice template screenshot](_screenshot.png)
+This site is based on the "Justice" template made by [CloudCannon](https://cloudcannon.com/).
 
-Justice was made by [CloudCannon](https://cloudcannon.com/).
-
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/justice-nextjs-template)
+[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/Effective-Altruism-UW-Madison/new.eauw.org)
 
 ## Features
 
 - Contact form
+- Events from Google Calendar
 - Pre-built pages
 - Pre-styled components
 - Blog with pagination
@@ -34,7 +32,7 @@ Justice was made by [CloudCannon](https://cloudcannon.com/).
 
 ## Develop
 
-Justice is built with [Next.js](https://nextjs.org/) (version `11.0.0`).
+This website is built with [Next.js](https://nextjs.org/) (version `11.0.0`).
 
 ```bash
 $ npm install
@@ -43,7 +41,7 @@ $ npm run dev
 
 ## Editing
 
-Justice is already optimised for adding, updating and removing pages, staff, posts, company details
+This website is optimised for adding, updating and removing pages, staff, posts, company details
 and footer elements in [CloudCannon](https://app.cloudcannon.com/).
 
 ### Posts
