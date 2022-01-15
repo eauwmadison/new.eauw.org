@@ -1,6 +1,6 @@
 {
-  "name": "justice-nextjs-template",
-  "version": "0.0.0",
+  "name": "eauw.org",
+  "version": "2.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3333",
@@ -9,20 +9,20 @@
     "start": "next start"
   },
   "dependencies": {
-    "@cloudcannon/react-connector": "^1.0.6",
+    "@cloudcannon/react-connector": "^1.0.8",
     "disqus-react": "^1.1.2",
-    "gray-matter": "^4.0.2",
-    "markdown-it": "^12.2.0",
-    "next": "^11.0.0",
-    "next-seo": "^4.26.0",
-    "prop-types": "^15.7.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^12.3.2",
+    "next": "^12.0.8",
+    "next-seo": "^4.28.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "next-sitemap": "^1.6.168",
-    "sass": "^1.39.0"
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.8",
+    "next-sitemap": "^1.9.9",
+    "sass": "^1.48.0"
   }
 }
