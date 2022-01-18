@@ -7,7 +7,9 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ["placekitten.com", "placebear.com", "unsplash.it"]
+    domains: ["placekitten.com", "placebear.com", "unsplash.it"],
+    loader: "imgix",
+    path: ""
   },
   swcMinify: true
 };

@@ -5,7 +5,7 @@ module.exports = {
     author_staff_member: "The staff member writing this post.",
     call_to_action: "Type of request shown at the bottom of this page.",
     testimonials: "Update, add or remove testimonials.",
-    role: "Shown as subtext on leadership-team member summaries.",
+    role: "Shown as subtext on leadership team member summaries.",
     contactEmailAddress: "Address for the contact form to send to.",
     new_window: "Whether the link opens a new browser tab/window."
   },
