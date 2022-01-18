@@ -6,5 +6,8 @@ module.exports = {
 
     return config;
   },
+  images: {
+    domains: ["placekitten.com", "placebear.com", "unsplash.it"]
+  },
   swcMinify: true
 };

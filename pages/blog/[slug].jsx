@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const page = await getCollectionItem("posts", params.slug);
   const author = await getCollectionItem(
-    "staff-members",
+    "leadership-team",
     page.author_staff_member
   );
 

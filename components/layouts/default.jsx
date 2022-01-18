@@ -6,8 +6,8 @@ import Icon from "../../components/icon";
 
 export default function DefaultLayout({ children, page }) {
   const title = page.title
-    ? `${page.title} | ${data.seo.site_title}`
-    : data.seo.site_title;
+    ? `${page.title} | ${data.seo.siteTitle}`
+    : data.seo.siteTitle;
   const description = page.description || data.seo.description;
 
   return (
@@ -16,21 +16,42 @@ export default function DefaultLayout({ children, page }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <link
           rel="icon"
           type="image/png"
-          href="/touch-icon.png"
-          sizes="192x192"
+          sizes="32x32"
+          href="/favicon-32x32.png"
         />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/ico/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/ico/safari-pinned-tab.svg"
+          color="#068294"
+        />
+        <link rel="shortcut icon" href="/ico/favicon.ico" />
+        <meta name="apple-mobile-web-app-title" content="EA UW" />
+        <meta name="application-name" content="EA UW&ndash;Madison" />
+        <meta name="msapplication-TileColor" content="#CBE5E9" />
+        <meta name="msapplication-config" content="/ico/browserconfig.xml" />
+        <meta name="theme-color" content="#CBE5E9" />
       </Head>
 
       <NextSeo
         title={title}
         description={description}
         openGraph={{
-          site_name: data.seo.site_name,
+          siteName: data.seo.siteName,
           url: data.site.url,
           title: title,
           description: description,
@@ -49,7 +70,7 @@ export default function DefaultLayout({ children, page }) {
       >
         <div className="container">
           <h1>
-            <Link href="/">{data.company.company_name}</Link>
+            <Link href="/">{data.organization.organizationName}</Link>
           </h1>
           <nav>
             <ul>
@@ -131,9 +152,9 @@ export default function DefaultLayout({ children, page }) {
 
             <ul className="footer-links">
               <li>
-                <h2>{data.company.company_name}</h2>
+                <h2>{data.organization.organizationName}</h2>
               </li>
-              <li>{data.company.description}</li>
+              <li>{data.organization.description}</li>
               <li>
                 <Link href="/feed.xml">
                   <a>
@@ -147,9 +168,9 @@ export default function DefaultLayout({ children, page }) {
 
         <div className="legal-line">
           <p className="container">
-            &copy; {new Date().getFullYear()} {data.company.company_name} &bull;{" "}
-            <Link href="/terms">Terms</Link> &bull; Template by{" "}
-            <Link href="https://cloudcannon.com/">CloudCannon</Link>
+            &copy; {new Date().getFullYear()}{" "}
+            {data.organization.organizationName} &bull;{" "}
+            <Link href="/terms">Terms</Link>
           </p>
         </div>
       </footer>

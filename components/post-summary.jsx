@@ -1,11 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 import PostSummaryDetails from "./post-summary-details";
 
 export default function PostSummary({ post }) {
   return (
     <li className="post-summary">
       <div className="post-summary-image">
-        <img src={post.image} alt={`Photo of ${post.title}`} />
+        <Image
+          src={post.image}
+          alt={`Photo of ${post.title}`}
+          width={600}
+          height={450}
+        />
       </div>
 
       <div className="post-summary-content has-post-summary-image">
@@ -16,7 +22,7 @@ export default function PostSummary({ post }) {
         <PostSummaryDetails post={post} />
 
         <p className="post-summary-author">
-          <img
+          <Image
             src={post.author.image}
             alt={`Photo of ${post.author.name}`}
             width="30"

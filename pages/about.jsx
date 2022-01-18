@@ -1,15 +1,15 @@
 import PageLayout from "../components/layouts/page";
-import StaffMember from "../components/staff-member";
+import Leader from "../components/leader";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
-export default function About({ page, staffMembers }) {
+export default function About({ page, leaders }) {
   return (
     <PageLayout page={page}>
       <p>Meet the members of our capable team:</p>
 
       <ul className="staff-list">
-        {staffMembers.map((staffMember, i) => (
-          <StaffMember staffMember={staffMember} key={i} />
+        {leaders.map((leader, i) => (
+          <Leader leader={leader} key={i} />
         ))}
       </ul>
     </PageLayout>
@@ -18,12 +18,12 @@ export default function About({ page, staffMembers }) {
 
 export async function getStaticProps({ params }) {
   const page = await getCollectionItem("pages", "about");
-  const staffMembers = await getCollection("staff-members");
+  const leaders = await getCollection("leadership-team");
 
   return {
     props: {
       page: JSON.parse(JSON.stringify(page)),
-      staffMembers
+      leaders
     }
   };
 }

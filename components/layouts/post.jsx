@@ -1,7 +1,7 @@
 import DefaultLayout from "./default";
 import PostSummary from "../post-summary";
 import PostSummaryDetails from "../post-summary-details";
-import StaffMember from "../staff-member";
+import Leader from "../leader";
 import data from "../../lib/data";
 import { DiscussionEmbed } from "disqus-react";
 
@@ -18,7 +18,7 @@ export default function PostLayout({ children, page, author }) {
 
         <h2>Meet the author</h2>
         <ul className="post-author staff-list">
-          <StaffMember staffMember={author} />
+          <Leader leader={author} />
         </ul>
 
         {data.site.disqus_shortname && (

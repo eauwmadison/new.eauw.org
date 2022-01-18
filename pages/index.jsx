@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PageLayout from "../components/layouts/page";
 import { getCollectionItem } from "../lib/collections";
 
@@ -9,9 +10,11 @@ export default function Home({ page }) {
           <blockquote className="testimonial" key={i}>
             <p className="testimonial-message">{testimonial.message}</p>
             <p className="testimonial-author">
-              <img
+              <Image
                 src={testimonial.testimonial_image}
                 alt={`Photo of ${testimonial.name}`}
+                width={60}
+                height={60}
               />{" "}
               {testimonial.name}
             </p>

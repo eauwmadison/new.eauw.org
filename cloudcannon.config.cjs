@@ -5,9 +5,8 @@ module.exports = {
     author_staff_member: "The staff member writing this post.",
     call_to_action: "Type of request shown at the bottom of this page.",
     testimonials: "Update, add or remove testimonials.",
-    phone_extension: "The digits after dialing the company phone.",
-    credentials: "Shown as subtext on staff member summaries.",
-    contact_email_address: "Address for the contact form to send to.",
+    role: "Shown as subtext on leadership-team member summaries.",
+    contactEmailAddress: "Address for the contact form to send to.",
     new_window: "Whether the link opens a new browser tab/window."
   },
 
@@ -45,10 +44,10 @@ module.exports = {
       path: "content/posts",
       url: "/blog/[slug]",
       output: true,
-      _enabled_editors: ["content", "data"]
+      _enabled_editors: ["visual", "content", "data"]
     },
-    staff_members: {
-      path: "content/staff-members",
+    leadership_team: {
+      path: "content/leadership-team",
       output: false,
       _icon: "people"
     },

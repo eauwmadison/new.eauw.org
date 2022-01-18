@@ -1,9 +1,9 @@
 {
-  "site_name": "Effective Altruism UW–Madison",
-  "site_title": "Effective Altruism UW–Madison",
+  "siteName": "Effective Altruism UW–Madison",
+  "siteTitle": "Effective Altruism UW–Madison",
   "description": "We are a group of students at UW–Madison with the common desire to do the most good we can.",
   "author": "",
-  "author_email": "",
+  "authorEmail": "",
   "images": [],
   "_array_structures": {
     "images": {

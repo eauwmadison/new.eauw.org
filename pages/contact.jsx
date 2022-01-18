@@ -18,13 +18,15 @@ export default function Contact({ page }) {
 
           <label>Phone Number</label>
           <p className="contact-info">
-            <a href={`tel:${data.company.phone}`}>{data.company.phone}</a>
+            <a href={`tel:${data.organization.phone}`}>
+              {data.organization.phone}
+            </a>
           </p>
 
           <label>Email Address</label>
           <p className="contact-info">
-            <a href={`mailto:${data.company.contact_email_address}`}>
-              {data.company.contact_email_address}
+            <a href={`mailto:${data.organization.contactEmailAddress}`}>
+              {data.organization.contactEmailAddress}
             </a>
           </p>
 
@@ -32,7 +34,7 @@ export default function Contact({ page }) {
           <address
             className="contact-info"
             dangerouslySetInnerHTML={{
-              __html: data.company.postal_address.replace(/,/g, "<br>")
+              __html: data.organization.postalAddress.replace(/,/g, "<br>")
             }}
           ></address>
 
@@ -40,7 +42,7 @@ export default function Contact({ page }) {
           <address
             className="contact-info"
             dangerouslySetInnerHTML={{
-              __html: data.company.address.replace(/,/g, "<br>")
+              __html: data.organization.address.replace(/,/g, "<br>")
             }}
           ></address>
         </div>
@@ -59,7 +61,7 @@ export default function Contact({ page }) {
             <input
               type="hidden"
               name="_to"
-              value={data.company.contact_email_address}
+              value={data.organization.contactEmailAddress}
             />
             <input type="text" name="_gotcha" style={{ display: "none" }} />
 
