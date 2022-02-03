@@ -64,10 +64,7 @@ export default function DefaultLayout({ children, page }) {
         }}
       />
 
-      <header
-        style={{ backgroundImage: "url(/uploads/building.jpg)" }}
-        className={page.large_header ? "main-hero" : ""}
-      >
+      <header className={page.large_header ? "main-hero" : ""}>
         <div className="container">
           <h1>
             <Link href="/">{data.organization.organizationName}</Link>
