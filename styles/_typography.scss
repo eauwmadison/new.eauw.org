@@ -15,6 +15,11 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Aller";
+  src: url("../assets/fonts/Aller_Rg.woff");
+}
+
 html {
   font-size: 9px;
   -webkit-tap-highlight-color: transparent;
@@ -32,7 +37,7 @@ body {
 body,
 input,
 textarea {
-  font-family: "Vollkorn", Georgia, serif;
+  font-family: "Cabin", "Aller", "Ubuntu", sans-serif;
   color: #3a4145;
   text-rendering: geometricPrecision;
 }
