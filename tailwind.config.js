@@ -4,7 +4,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    fontFamily: {
+      header: ['"Rockwell Nova"', '"Roboto Slab"', "Rokkit", "serif"],
+      body: ["Cabin", "Aller", "Ubuntu", "sans-serif"]
+    },
     extend: {}
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/typography')
+  ]
 };
