@@ -1,5 +1,5 @@
 module.exports = {
-  _comments: {
+  "_comments": {
     large_header: "Toggles the size of the top banner.",
     show_in_navigation: "Toggles a link in the top banner.",
     author_staff_member: "The staff member writing this post.",
@@ -10,7 +10,7 @@ module.exports = {
     new_window: "Whether the link opens a new browser tab/window."
   },
 
-  _select_data: {
+  "_select_data": {
     call_to_actions: ["Contact", "Blog"],
     social_icons: [
       "Facebook",
@@ -24,7 +24,7 @@ module.exports = {
     ]
   },
 
-  paths: {
+  "paths": {
     collections: "content",
     data: "data",
     static: "public",
