@@ -5,8 +5,8 @@ export default function NotFound() {
     <PageLayout
       page={{
         title: "Not Found",
-        call_to_action: "Contact",
-        large_header: false
+        callToAction: "Contact",
+        largeHeader: false
       }}
     >
       <p>This page doesn&apos;t exist.</p>

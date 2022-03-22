@@ -1,9 +1,9 @@
 module.exports = {
   "_comments": {
-    large_header: "Toggles the size of the top banner.",
+    largeHeader: "Toggles the size of the top banner.",
     show_in_navigation: "Toggles a link in the top banner.",
     author_staff_member: "The staff member writing this post.",
-    call_to_action: "Type of request shown at the bottom of this page.",
+    callToAction: "Type of request shown at the bottom of this page.",
     testimonials: "Update, add or remove testimonials.",
     role: "Shown as subtext on leadership team member summaries.",
     contactEmailAddress: "Address for the contact form to send to.",
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   "_select_data": {
-    call_to_actions: ["Contact", "Blog"],
+    callToActions: ["Contact", "Blog"],
     social_icons: [
       "Facebook",
       "Instagram",

@@ -64,11 +64,20 @@ export default function DefaultLayout({ children, page }) {
         }}
       />
 
-      <header className={page.large_header ? "main-hero" : ""}>
+      <header className={page.largeHeader ? "main-hero" : ""}>
         <div className="container">
-          <h1>
-            <Link href="/">{data.organization.organizationName}</Link>
+          {/* <Link href="/">
+              <h1>{data.organization.organizationName}</h1>
+              <h1>{data.organization.organizationSubheading}</h1>
+            </Link> */}
+          <div className="organization-group">
+          <h1 className="organization-name">
+            {data.organization.organizationName}
           </h1>
+          <h1 className="organization-subheading">
+            {data.organization.organizationSubheading}
+          </h1>
+          </div>
           <nav>
             <ul>
               <li>
@@ -104,7 +113,7 @@ export default function DefaultLayout({ children, page }) {
         <div className="container">{children}</div>
       </section>
 
-      {page.call_to_action === "Contact" && (
+      {page.callToAction === "Contact" && (
         <section className="quote-section">
           <p className="container">
             <Link href="/contact">Contact us</Link> today to find out how we can
@@ -113,7 +122,7 @@ export default function DefaultLayout({ children, page }) {
         </section>
       )}
 
-      {page.call_to_action === "Blog" && (
+      {page.callToAction === "Blog" && (
         <section className="quote-section">
           <p className="container">
             <Link href="/blog">Read our blog</Link> for an introduction and
@@ -149,7 +158,10 @@ export default function DefaultLayout({ children, page }) {
 
             <ul className="footer-links">
               <li>
-                <h2>{data.organization.organizationName}</h2>
+                <div className="organization-group">
+                  <h2 className="organization-name">{data.organization.organizationName}</h2>
+                  <h2 className="organization-subheading">{data.organization.organizationSubheading}</h2>
+                </div>
               </li>
               <li>{data.organization.description}</li>
               <li>

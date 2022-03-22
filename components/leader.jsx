@@ -29,7 +29,7 @@ export default function Leader({ leader }) {
 
       <div
         className="staff-bio"
-        dangerouslySetInnerHTML={{ __html: leader.content_html }}
+        dangerouslySetInnerHTML={{ __html: leader.contentHTML }}
       ></div>
     </li>
   );

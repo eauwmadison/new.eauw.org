@@ -11,7 +11,7 @@ export default function Home({ page }) {
             <p className="testimonial-message">{testimonial.message}</p>
             <p className="testimonial-author">
               <Image
-                src={testimonial.testimonial_image}
+                src={testimonial.testimonialImage}
                 alt={`Photo of ${testimonial.name}`}
                 width={60}
                 height={60}
