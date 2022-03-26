@@ -1,9 +1,9 @@
 import "../styles/main.scss";
 import { CloudCannonConnect } from "@cloudcannon/react-connector";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
+import { google_analytics_key } from "../data/site.json";
 
-const PROPERTY_ID = "308458331";
-ReactGA.initialize(PROPERTY_ID);
+ReactGA.initialize(google_analytics_key);
 
 export default function App({ Component, pageProps }) {
   const AppComponent = CloudCannonConnect(Component);
