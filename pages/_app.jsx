@@ -1,11 +1,27 @@
 import "../styles/main.scss";
 import { CloudCannonConnect } from "@cloudcannon/react-connector";
-import ReactGA from "react-ga";
-import { google_analytics_key } from "../data/site.json";
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-ReactGA.initialize(google_analytics_key);
+import * as ga from '../lib/ga'
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url)
+    }
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
   const AppComponent = CloudCannonConnect(Component);
   return <AppComponent {...pageProps} />;
 }
