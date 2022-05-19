@@ -78,17 +78,15 @@ export default function DefaultLayout({ children, page }) {
           </Link>
           <nav>
             <ul>
-              {data.navbar.links.map((link) => {
-                return (
-                  <li key={link.link}>
-                    <Link href={link.link}>
+              {data.navbar.links.map((link) => (
+                <li key={link.link}>
+                  <Link href={link.link}>
                     <a className={page.slug === link.link ? "active" : ""}>
                       {link.name}
                     </a>
                   </Link>
-                  </li>
-                );
-              })}
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -166,9 +164,7 @@ export default function DefaultLayout({ children, page }) {
 
         <div className="legal-line">
           <p className="container">
-            &copy; {new Date().getFullYear()}{" "}
-            {data.organization.organizationName} &bull;{" "}
-            <Link href="/terms">Terms</Link>
+            Made with 💡 in Madison, WI
           </p>
         </div>
       </footer>
