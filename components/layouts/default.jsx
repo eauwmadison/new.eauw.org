@@ -66,44 +66,29 @@ export default function DefaultLayout({ children, page }) {
 
       <header className={page.largeHeader ? "main-hero" : ""}>
         <div className="container">
-          {/* <Link href="/">
-              <h1>{data.organization.organizationName}</h1>
-              <h1>{data.organization.organizationSubheading}</h1>
-            </Link> */}
-          <div className="organization-group">
-          <h1 className="organization-name">
-            {data.organization.organizationName}
-          </h1>
-          <h1 className="organization-subheading">
-            {data.organization.organizationSubheading}
-          </h1>
-          </div>
+          <Link href="/" passHref>
+            <div className="organization-group">
+              <h1 className="organization-name">
+                {data.organization.organizationName}
+              </h1>
+              <h1 className="organization-subheading">
+                {data.organization.organizationSubheading}
+              </h1>
+            </div>
+          </Link>
           <nav>
             <ul>
-              <li>
-                <Link href="/about">
-                  <a className={page.slug === "about" ? "active" : ""}>About</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services">
-                  <a className={page.slug === "services" ? "active" : ""}>
-                    Services
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a className={page.slug === "contact" ? "active" : ""}>
-                    Contact
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog">
-                  <a className={page.slug === "blog" ? "active" : ""}>Blog</a>
-                </Link>
-              </li>
+              {data.navbar.links.map((link) => {
+                return (
+                  <li key={link.link}>
+                    <Link href={link.link}>
+                    <a className={page.slug === link.link ? "active" : ""}>
+                      {link.name}
+                    </a>
+                  </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </div>
@@ -159,8 +144,12 @@ export default function DefaultLayout({ children, page }) {
             <ul className="footer-links">
               <li>
                 <div className="organization-group">
-                  <h2 className="organization-name">{data.organization.organizationName}</h2>
-                  <h2 className="organization-subheading">{data.organization.organizationSubheading}</h2>
+                  <h2 className="organization-name">
+                    {data.organization.organizationName}
+                  </h2>
+                  <h2 className="organization-subheading">
+                    {data.organization.organizationSubheading}
+                  </h2>
                 </div>
               </li>
               <li>{data.organization.description}</li>
