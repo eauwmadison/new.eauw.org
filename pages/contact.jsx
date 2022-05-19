@@ -16,12 +16,6 @@ export default function Contact({ page }) {
             </a>
           </p>
 
-          <label>Phone Number</label>
-          <p className="contact-info">
-            <a href={`tel:${data.organization.phone}`}>
-              {data.organization.phone}
-            </a>
-          </p>
 
           <label>Email Address</label>
           <p className="contact-info">
@@ -30,19 +24,19 @@ export default function Contact({ page }) {
             </a>
           </p>
 
+          <label>Office Address</label>
+          <address
+            className="contact-info"
+            dangerouslySetInnerHTML={{
+              __html: data.organization.officeAddress.replace(/,/g, "<br>")
+            }}
+          ></address>
+
           <label>Postal Address</label>
           <address
             className="contact-info"
             dangerouslySetInnerHTML={{
               __html: data.organization.postalAddress.replace(/,/g, "<br>")
-            }}
-          ></address>
-
-          <label>Address</label>
-          <address
-            className="contact-info"
-            dangerouslySetInnerHTML={{
-              __html: data.organization.address.replace(/,/g, "<br>")
             }}
           ></address>
         </div>
