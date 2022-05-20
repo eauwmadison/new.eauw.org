@@ -20,9 +20,6 @@ export default function Leader({ leader }) {
             <small>{leader.role}</small>
           </li>
           <li>
-            <Link href={`tel:${data.organization.phone}`}>
-              {data.organization.phone}
-            </Link>{" "}
           </li>
         </ul>
       </div>

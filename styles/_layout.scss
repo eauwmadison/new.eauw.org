@@ -83,11 +83,18 @@ header {
 header,
 footer {
   a {
-    color: #3a4145;
+    color: $color-ea-dark;
 
     &.active {
       border-bottom: 2px solid;
     }
+  }
+}
+
+header,
+footer {
+  a:hover {
+    color: $color-ea-primary;
   }
 }
 
@@ -113,16 +120,24 @@ section {
 }
 
 .main {
-  @extend .light-section;
+  @extend .white-section;
   font-size: 2.25rem;
 }
 
-.light-section {
-  background-color: #f5f5f7;
+.white-section {
+  background-color: $white;
+}
+
+.beige-section {
+  background-color: $color-ea-beige;
+}
+
+.blue-section {
+  background-color: $color-ea-primary;
 }
 
 .dark-section {
-  background-color: #3e3f46;
+  background-color: $color-ea-dark;
   color: #c1c1c1;
 
   a {
@@ -236,7 +251,7 @@ footer {
 
     a {
       svg {
-        fill: #3a4145;
+        fill: $color-ea-dark;
         margin-right: 10px;
         transition: fill 0.2s ease;
         vertical-align: middle;
@@ -247,7 +262,7 @@ footer {
       }
 
       &:hover svg {
-        fill: #73a9c9;
+        fill: $color-ea-primary;
       }
     }
   }

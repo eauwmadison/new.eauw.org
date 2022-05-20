@@ -1,3 +1,5 @@
+@import "colors";
+
 @font-face {
   font-family: "Rockwell Nova";
   src: url("../assets/fonts/RockwellNova/rockwellnova-webfont.woff2")
@@ -34,8 +36,8 @@ body {
 body,
 input,
 textarea {
-  font-family: "Cabin", "Aller", "Ubuntu", sans-serif;
-  color: #3a4145;
+  font-family: "Cabin", "Aller", "Merriweather", "Ubuntu", sans-serif;
+  color: $color-ea-dark;
   text-rendering: geometricPrecision;
 }
 
@@ -46,7 +48,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rockwell Nova", Georgia, serif;
+  font-family: "Rockwell Nova", "Merriweather", Georgia, serif;
   font-weight: 400;
 }
 
@@ -96,11 +98,11 @@ h6 {
 }
 
 a {
-  color: #4489b1;
+  color: $color-ea-primary;
   transition: color 0.2s ease;
   text-decoration: none;
 
   &:hover {
-    color: #73a9c9;
+    color: $color-ea-light;
   }
 }

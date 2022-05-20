@@ -81,7 +81,7 @@ export default function DefaultLayout({ children, page }) {
               {data.navbar.links.map((link) => (
                 <li key={link.link}>
                   <Link href={link.link}>
-                    <a className={page.slug === link.link ? "active" : ""}>
+                    <a className={"/" + page.slug === link.link ? "active" : ""}>
                       {link.name}
                     </a>
                   </Link>
