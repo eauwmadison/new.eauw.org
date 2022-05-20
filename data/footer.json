@@ -46,6 +46,12 @@
         "new_window": true
       },
       {
+        "name": "GitHub",
+        "link": "https://github.com/eauwmadison",
+        "social_icon": "GitHub",
+        "new_window": true
+      },
+      {
         "name": "YouTube",
         "link": "https://www.youtube.com/channel/UCvQu2QhWLNPZwVA-41lXnqQ",
         "social_icon": "YouTube",
@@ -59,7 +65,7 @@
       },
       {
         "name": "Instagram",
-        "link": "https://instagram.com/",
+        "link": "https://www.instagram.com/uweffectivealtruism/",
         "social_icon": "Instagram",
         "new_window": true
       }
