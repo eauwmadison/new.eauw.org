@@ -16,7 +16,6 @@ export default function Contact({ page }) {
             </a>
           </p>
 
-
           <label>Email Address</label>
           <p className="contact-info">
             <a href={`mailto:${data.organization.contactEmailAddress}`}>

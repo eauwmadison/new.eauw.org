@@ -5,6 +5,7 @@ import { getCollectionItem } from "../lib/collections";
 export default function Home({ page }) {
   return (
     <PageLayout page={page}>
+      <div className="events-section">Events</div>
       <div className="testimonials">
         {page.testimonials.map((testimonial, i) => (
           <blockquote className="testimonial" key={i}>

@@ -34,7 +34,8 @@ input[type="submit"],
   font-size: 2rem;
   color: $white;
   cursor: pointer;
-  transition: color 0.1s ease-in-out, border 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.1s ease-in-out, border 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 
   &:hover {
     background-color: $color-ea-light;

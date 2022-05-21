@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+// import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import data from "../../lib/data";
@@ -19,19 +21,19 @@ export default function DefaultLayout({ children, page }) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/ico/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/ico/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/ico/favicon-16x16.png"
         />
         <link rel="manifest" href="/ico/site.webmanifest" />
         <link
@@ -68,12 +70,19 @@ export default function DefaultLayout({ children, page }) {
         <div className="container">
           <Link href="/" passHref>
             <div className="organization-group">
-              <h1 className="organization-name">
-                {data.organization.organizationName}
-              </h1>
-              <h1 className="organization-subheading">
-                {data.organization.organizationSubheading}
-              </h1>
+              <img
+                className="logo"
+                src="/uploads/Effective Altruism Lightbulb.svg"
+                alt="EA lightbulb Logo"
+              ></img>
+              <div className="organization-text">
+                <h1 className="organization-name">
+                  {data.organization.organizationName}
+                </h1>
+                <h1 className="organization-subheading">
+                  {data.organization.organizationSubheading}
+                </h1>
+              </div>
             </div>
           </Link>
           <nav>
@@ -81,7 +90,9 @@ export default function DefaultLayout({ children, page }) {
               {data.navbar.links.map((link) => (
                 <li key={link.link}>
                   <Link href={link.link}>
-                    <a className={"/" + page.slug === link.link ? "active" : ""}>
+                    <a
+                      className={"/" + page.slug === link.link ? "active" : ""}
+                    >
                       {link.name}
                     </a>
                   </Link>
@@ -163,9 +174,7 @@ export default function DefaultLayout({ children, page }) {
         </div>
 
         <div className="legal-line">
-          <p className="container">
-            Made with 💡 in Madison, WI
-          </p>
+          <p className="container">Made with 💡 in Madison, WI</p>
         </div>
       </footer>
     </>
