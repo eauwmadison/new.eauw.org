@@ -7,7 +7,6 @@ export default function PageLayout({ children, page }) {
     <DefaultLayout page={page}>
       <div className="page-header">
         <h2>{page.title}</h2>
-        {console.log(page.mainImage)}
       </div>
 
       <article className="content">
