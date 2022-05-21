@@ -2,6 +2,7 @@
 title:
 callToAction: Contact
 largeHeader: true
+calendar: true
 contentHTML: >-
   <p>We are a community of UW–Madison students unified by a common desire to do the most we can to improve the world. Our organization seeks to promote the global movement of effective altruism, using evidence and reason to assess how to benefit others as much as possible and taking action based on the findings.</p>
 mainImage: /uploads/members.png

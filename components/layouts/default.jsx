@@ -3,7 +3,9 @@ import Head from "next/head";
 // import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+
 import data from "../../lib/data";
+import Calendar from "../../components/calendar";
 import Icon from "../../components/icon";
 
 export default function DefaultLayout({ children, page }) {
@@ -106,6 +108,15 @@ export default function DefaultLayout({ children, page }) {
       <section className="main">
         <div className="container">{children}</div>
       </section>
+
+      {page.calendar && (
+        <section className="events-section beige-section">
+          <div className="container">
+            <h2>Events</h2>
+            <Calendar />
+          </div>
+        </section>
+      )}
 
       {page.callToAction === "Contact" && (
         <section className="quote-section">
