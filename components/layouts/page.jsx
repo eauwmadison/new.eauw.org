@@ -10,14 +10,7 @@ export default function PageLayout({ children, page }) {
       </div>
 
       <article className="content">
-        <Image
-          width={100}
-          height={100}
-          src="https://eauw.org/img/members.png"
-          alt="members"
-        ></Image>
         <div dangerouslySetInnerHTML={{ __html: page.contentHTML }} />
-
         {children}
       </article>
     </DefaultLayout>

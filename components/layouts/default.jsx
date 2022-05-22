@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 
@@ -114,6 +114,27 @@ export default function DefaultLayout({ children, page }) {
           <div className="container">
             <h2>Events</h2>
             <Calendar />
+          </div>
+        </section>
+      )}
+
+      {page.testimonials && (
+        <section className="container">
+          <div className="testimonials">
+            {page.testimonials.map((testimonial, i) => (
+              <blockquote className="testimonial" key={i}>
+                <p className="testimonial-message">{testimonial.message}</p>
+                <p className="testimonial-author">
+                  <Image
+                    src={testimonial.testimonialImage}
+                    alt={`Photo of ${testimonial.name}`}
+                    width={60}
+                    height={60}
+                  />{" "}
+                  {testimonial.name}
+                </p>
+              </blockquote>
+            ))}
           </div>
         </section>
       )}

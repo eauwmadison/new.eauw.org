@@ -3,8 +3,9 @@ title:
 callToAction: Contact
 largeHeader: true
 calendar: true
+# testimonialSection: true
 contentHTML: >-
-  <p>We are a community of UW–Madison students unified by a common desire to do the most we can to improve the world. Our organization seeks to promote the global movement of effective altruism, using evidence and reason to assess how to benefit others as much as possible and taking action based on the findings.</p>
+  <div class="image-and-text"><img src="/uploads/members.png" alt="members"/><p>We are a community of UW–Madison students unified by a common desire to do the most we can to improve the world. Our organization seeks to promote the global movement of effective altruism, using evidence and reason to assess how to benefit others as much as possible and taking action based on the findings.</p></div>
 mainImage: /uploads/members.png
 testimonials:
   - message: >-
