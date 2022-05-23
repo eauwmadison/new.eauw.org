@@ -173,7 +173,7 @@ export default function DefaultLayout({ children, page }) {
                   <li key={link.name}>
                     <Link href={link.link}>
                       <a target={link.new_window ? "_blank" : "_self"}>
-                        {link.social_icon && <Icon icon={link.social_icon} />}{" "}
+                        {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
                         {link.name}
                       </a>
                     </Link>

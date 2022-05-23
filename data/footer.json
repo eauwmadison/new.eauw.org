@@ -7,20 +7,20 @@
         "link": "/"
       },
       {
-        "name": "About",
-        "link": "/about"
-      },
-      {
         "name": "Team",
         "link": "/team"
+      },
+      {
+        "name": "Programs",
+        "link": "/programs"
       },
       {
         "name": "Contact",
         "link": "/contact"
       },
       {
-        "name": "Blog",
-        "link": "/blog"
+        "name": "Posts",
+        "link": "/posts"
       }
     ]
   },
@@ -30,43 +30,43 @@
       {
         "name": "Slack",
         "link": "https://go.eauw.org/slack",
-        "social_icon": "Slack",
+        "socialIcon": "Slack",
         "new_window": true
       },
       {
         "name": "WIN",
         "link": "https://go.eauw.org/win",
-        "social_icon": "WIN",
+        "socialIcon": "WIN",
         "new_window": true
       },
       {
         "name": "LinkedIn",
         "link": "https://linkedin.com/company/eauw",
-        "social_icon": "LinkedIn",
+        "socialIcon": "LinkedIn",
         "new_window": true
       },
       {
         "name": "GitHub",
         "link": "https://github.com/eauwmadison",
-        "social_icon": "GitHub",
+        "socialIcon": "GitHub",
         "new_window": true
       },
       {
         "name": "YouTube",
         "link": "https://www.youtube.com/channel/UCvQu2QhWLNPZwVA-41lXnqQ",
-        "social_icon": "YouTube",
+        "socialIcon": "YouTube",
         "new_window": true
       },
       {
         "name": "Facebook",
         "link": "https://www.facebook.com/eauwmadison",
-        "social_icon": "Facebook",
+        "socialIcon": "Facebook",
         "new_window": true
       },
       {
         "name": "Instagram",
         "link": "https://www.instagram.com/uweffectivealtruism/",
-        "social_icon": "Instagram",
+        "socialIcon": "Instagram",
         "new_window": true
       }
     ]

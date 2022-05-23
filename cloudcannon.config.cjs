@@ -7,12 +7,13 @@ module.exports = {
     testimonials: "Update, add or remove testimonials.",
     role: "Shown as subtext on leadership team member summaries.",
     contactEmailAddress: "Address for the contact form to send to.",
-    new_window: "Whether the link opens a new browser tab/window."
+    new_window: "Whether the link opens a new browser tab/window.",
+    calendar: "Whether a calendar is shown on the page."
   },
 
   "_select_data": {
     callToActions: ["Contact", "Blog"],
-    social_icons: [
+    socialIcons: [
       "Facebook",
       "Instagram",
       "LinkedIn",
@@ -20,7 +21,10 @@ module.exports = {
       "Tumblr",
       "Twitter",
       "YouTube",
-      "RSS"
+      "RSS",
+      "GitHub",
+      "WIN",
+      "Slack"
     ]
   },
 
@@ -42,7 +46,7 @@ module.exports = {
     },
     posts: {
       path: "content/posts",
-      url: "/blog/[slug]",
+      url: "/posts/[slug]",
       output: true,
       _enabled_editors: ["visual", "content", "data"]
     },
