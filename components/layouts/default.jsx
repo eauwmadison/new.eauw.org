@@ -151,7 +151,7 @@ export default function DefaultLayout({ children, page }) {
       {page.callToAction === "Blog" && (
         <section className="quote-section">
           <p className="container">
-            <Link href="/blog">Read our blog</Link> for an introduction and
+            <Link href="/posts">Read our blog</Link> for an introduction and
             quick tips on various areas of the law.
           </p>
         </section>

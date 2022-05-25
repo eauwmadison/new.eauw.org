@@ -4,7 +4,7 @@ import PostSummary from "../../components/post-summary";
 import { getCollection, getCollectionItem } from "../../lib/collections";
 import { generateRss } from "../../lib/rss";
 
-export default function Blog({ page, posts }) {
+export default function Posts({ page, posts }) {
   return (
     <PageLayout page={page}>
       <ol className="post-list">
@@ -17,7 +17,7 @@ export default function Blog({ page, posts }) {
 }
 
 export async function getStaticProps({ params }) {
-  const page = await getCollectionItem("pages", "blog");
+  const page = await getCollectionItem("pages", "posts");
   const posts = await getCollection("posts", {
     excerpt: true,
     sortKey: "date"
