@@ -1,74 +1,25 @@
-[
-  {
-    "title": "Pages",
-    "links": [
-      {
-        "name": "Home",
-        "link": "/"
-      },
-      {
-        "name": "Team",
-        "link": "/team"
-      },
-      {
-        "name": "Programs",
-        "link": "/programs"
-      },
-      {
-        "name": "Contact",
-        "link": "/contact"
-      },
-      {
-        "name": "Posts",
-        "link": "/posts"
-      }
-    ]
-  },
-  {
-    "title": "Social",
-    "links": [
-      {
-        "name": "Slack",
-        "link": "https://go.eauw.org/slack",
-        "socialIcon": "Slack",
-        "new_window": true
-      },
-      {
-        "name": "WIN",
-        "link": "https://go.eauw.org/win",
-        "socialIcon": "WIN",
-        "new_window": true
-      },
-      {
-        "name": "LinkedIn",
-        "link": "https://linkedin.com/company/eauw",
-        "socialIcon": "LinkedIn",
-        "new_window": true
-      },
-      {
-        "name": "GitHub",
-        "link": "https://github.com/eauwmadison",
-        "socialIcon": "GitHub",
-        "new_window": true
-      },
-      {
-        "name": "YouTube",
-        "link": "https://www.youtube.com/channel/UCvQu2QhWLNPZwVA-41lXnqQ",
-        "socialIcon": "YouTube",
-        "new_window": true
-      },
-      {
-        "name": "Facebook",
-        "link": "https://www.facebook.com/eauwmadison",
-        "socialIcon": "Facebook",
-        "new_window": true
-      },
-      {
-        "name": "Instagram",
-        "link": "https://www.instagram.com/uweffectivealtruism/",
-        "socialIcon": "Instagram",
-        "new_window": true
-      }
-    ]
-  }
-]
+{
+  "title": "Pages",
+  "links": [
+    {
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "name": "Team",
+      "link": "/team"
+    },
+    {
+      "name": "Programs",
+      "link": "/programs"
+    },
+    {
+      "name": "Contact",
+      "link": "/contact"
+    },
+    {
+      "name": "Posts",
+      "link": "/posts"
+    }
+  ]
+}

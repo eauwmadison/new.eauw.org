@@ -1,4 +1,6 @@
+import Link from "next/link";
 import PageLayout from "../components/layouts/page";
+import Icon from "../components/icon";
 import data from "../lib/data";
 import { getCollectionSlugs, getCollectionItem } from "../lib/collections";
 
@@ -38,15 +40,39 @@ export default function Contact({ page }) {
               __html: data.organization.postalAddress.replace(/,/g, "<br>")
             }}
           ></address>
+
+          <label>Social Accounts</label>
+          <ul className="social-links">
+            {data.social.links.map((link) => (
+              <li key={link.name}>
+                <Link href={link.link}>
+                  <a target={link.new_window ? "_blank" : "_self"}>
+                    {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                    {link.name}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="column">
           <form method="post" action="/contact-success">
             <label htmlFor="email_address">Email Address</label>
-            <input id="email_address" type="text" name="email" />
+            <input
+              id="email_address"
+              type="text"
+              name="email"
+              placeholder="peter.singer@gmail.com"
+            />
 
             <label htmlFor="name">Name</label>
-            <input id="name" type="text" name="name" />
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Peter Singer"
+            />
 
             <label htmlFor="message">Message</label>
             <textarea id="message" name="message"></textarea>

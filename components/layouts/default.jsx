@@ -163,24 +163,39 @@ export default function DefaultLayout({ children, page }) {
             className="footer-columns"
             data-cms-editor-link="cloudcannon:collections/content/data/footer.json"
           >
-            {data.footer.map((column) => (
-              <ul className="footer-links" key={column.title}>
-                <li>
-                  <h2>{column.title}</h2>
-                </li>
+            <ul className="footer-links">
+              <li>
+                <h2>Pages</h2>
+              </li>
 
-                {column.links.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.link}>
-                      <a target={link.new_window ? "_blank" : "_self"}>
-                        {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
-                        {link.name}
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ))}
+              {data.footer.links.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.link}>
+                    <a target={link.new_window ? "_blank" : "_self"}>
+                      {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                      {link.name}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="footer-links">
+              <li>
+                <h2>Social</h2>
+              </li>
+
+              {data.social.links.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.link}>
+                    <a target={link.new_window ? "_blank" : "_self"}>
+                      {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                      {link.name}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
             <ul className="footer-links">
               <li>
@@ -195,11 +210,9 @@ export default function DefaultLayout({ children, page }) {
               </li>
               <li>{data.organization.description}</li>
               <li>
-                <Link href="/feed.xml">
-                  <a>
-                    <Icon icon="RSS" /> Subscribe with RSS
-                  </a>
-                </Link>
+                {
+                  // add newsletter signup here
+                }
               </li>
             </ul>
           </div>

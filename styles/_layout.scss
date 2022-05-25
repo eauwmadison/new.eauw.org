@@ -252,9 +252,7 @@ footer {
   }
 }
 
-.footer-links {
-  flex: 1 0 180px;
-  margin: 10px;
+.social-links {
   padding: 0;
 
   li {
@@ -262,6 +260,12 @@ footer {
     margin: 15px 0;
 
     a {
+      color: $color-ea-dark;
+
+      &:hover {
+        color: $color-ea-primary;
+      }
+
       svg {
         fill: $color-ea-dark;
         margin-right: 10px;
@@ -269,12 +273,28 @@ footer {
         vertical-align: middle;
         position: relative;
         top: -2px;
-        width: 22px;
-        height: 22px;
+        width: 26px;
+        height: 26px;
       }
 
       &:hover svg {
         fill: $color-ea-primary;
+      }
+    }
+  }
+}
+
+.footer-links {
+  @extend .social-links;
+
+  flex: 1 0 180px;
+  margin: 10px;
+
+  li {
+    a {
+      svg {
+        width: 22px;
+        height: 22px;
       }
     }
   }
