@@ -68,7 +68,7 @@ export default function DefaultLayout({ children, page }) {
         }}
       />
 
-      <header className={page.largeHeader ? "main-hero" : ""}>
+      <header className={page.largeHeader ? "large-header" : ""}>
         <div className="container">
           <Link href="/" passHref>
             <div className="organization-group">
