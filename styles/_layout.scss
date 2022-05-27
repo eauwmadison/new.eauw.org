@@ -61,17 +61,97 @@ header {
       .organization-name {
         color: $color-ea-dark;
         font-weight: bold;
+        font-size: 4.5rem;
+
       }
       .organization-subheading {
         margin-top: 0;
         color: $color-ea-primary;
+        font-size: 4.5rem;
       }
     }
 
+  
+    
     .container {
       text-align: left;
     }
   }
+
+
+  @media (min-width: $xxs) {
+    &.large-header {
+      // height: 80vh;
+      // background-position: calc(50% - 350px) calc(100% + 20px);
+      .organization-name {
+        color: $color-ea-dark;
+        font-weight: bold;
+        font-size: 5.3rem;
+
+      }
+      .organization-subheading {
+        margin-top: 0;
+        color: $color-ea-primary;
+        font-size: 5.3rem;
+      }
+    }
+
+  
+    
+    .container {
+      text-align: left;
+    }
+  }
+
+  @media (min-width: $xs) {
+    &.large-header {
+      // height: 80vh;
+      // background-position: calc(50% - 350px) calc(100% + 20px);
+      .organization-name {
+        color: $color-ea-dark;
+        font-weight: bold;
+        font-size: 6.3rem;
+
+      }
+      .organization-subheading {
+        margin-top: 0;
+        color: $color-ea-primary;
+        font-size: 6.3rem;
+      }
+    }
+
+  
+    
+    .container {
+      text-align: left;
+    }
+  }
+
+  @media (min-width: $s) {
+    &.large-header {
+      // height: 80vh;
+      // background-position: calc(50% - 350px) calc(100% + 20px);
+      .organization-name {
+        color: $color-ea-dark;
+        font-weight: bold;
+        font-size: 7.5rem;
+
+      }
+      .organization-subheading {
+        margin-top: 0;
+        color: $color-ea-primary;
+        font-size: 7.5rem;
+      }
+    }
+
+  
+    
+    .container {
+      text-align: left;
+    }
+  }
+
+
 
   nav {
     margin-top: 2rem;
