@@ -16,5 +16,5 @@ export default function Calendar() {
   if (!data) return <div>Loading...</div>;
   if (data) console.log(data.items);
 
-  return <div>hello</div>;
+  return <div className="box">[event goes here]</div>;
 }
