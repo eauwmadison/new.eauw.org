@@ -1,6 +1,8 @@
 import { writeFile } from "fs/promises";
+
 import PageLayout from "../../components/layouts/page";
 import PostSummary from "../../components/post-summary";
+
 import { getCollection, getCollectionItem } from "../../lib/collections";
 import { generateRss } from "../../lib/rss";
 
@@ -22,6 +24,7 @@ export async function getStaticProps({ params }) {
     excerpt: true,
     sortKey: "date"
   });
+
   const postsWithAuthor = await Promise.all(
     posts.map(async (post) => {
       const author = await getCollectionItem(

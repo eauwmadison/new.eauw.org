@@ -1,10 +1,20 @@
 import Link from "next/link";
+
 import PageLayout from "../components/layouts/page";
 import Icon from "../components/icon";
-import data from "../lib/data";
-import { getCollectionSlugs, getCollectionItem } from "../lib/collections";
 
-export default function Contact({ page }) {
+import data from "../lib/data";
+import { getCollection, getCollectionItem } from "../lib/collections";
+
+export default function Contact({ page, placeholders }) {
+  const randomPlaceholder = placeholders[
+    Math.floor(Math.random() * placeholders.length)
+  ] || {
+    email: "you@example.com",
+    name: "Your name",
+    message: "Your message."
+  };
+
   return (
     <PageLayout page={page}>
       <div className="columns">
@@ -63,7 +73,7 @@ export default function Contact({ page }) {
               id="email_address"
               type="text"
               name="email"
-              placeholder="peter.singer@gmail.com"
+              placeholder={randomPlaceholder.email}
             />
 
             <label htmlFor="name">Name</label>
@@ -71,11 +81,15 @@ export default function Contact({ page }) {
               id="name"
               type="text"
               name="name"
-              placeholder="Peter Singer"
+              placeholder={randomPlaceholder.name}
             />
 
             <label htmlFor="message">Message</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              placeholder={randomPlaceholder.message}
+            ></textarea>
 
             <input
               type="hidden"
@@ -94,10 +108,12 @@ export default function Contact({ page }) {
 
 export async function getStaticProps({ params }) {
   const page = await getCollectionItem("pages", "contact");
+  const placeholders = await getCollection("form-placeholders");
 
   return {
     props: {
-      page: JSON.parse(JSON.stringify(page))
+      page: JSON.parse(JSON.stringify(page)),
+      placeholders
     }
   };
 }
