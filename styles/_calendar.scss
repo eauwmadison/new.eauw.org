@@ -1,0 +1,19 @@
+.event-date {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  line-height: normal;
+
+  .event-day {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .event-month {
+    text-transform: uppercase;
+    font-family: "Rockwell Nova", "Merriweather", Georgia, serif;
+    text-size-adjust: none;
+  }
+}
