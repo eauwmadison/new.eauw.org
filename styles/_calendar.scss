@@ -1,3 +1,10 @@
+@import "colors";
+
+.events {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .event-date {
   width: 15%;
   display: flex;
@@ -15,5 +22,17 @@
     text-transform: uppercase;
     font-family: "Rockwell Nova", "Merriweather", Georgia, serif;
     text-size-adjust: none;
+  }
+}
+
+.calendar-error {
+  background: $light-blue;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  .error {
+    margin-top: 1rem;
+    font-family: monospace;
   }
 }

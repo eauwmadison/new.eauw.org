@@ -110,9 +110,9 @@ export default function DefaultLayout({ children, page }) {
       </section>
 
       {page.calendar && (
-        <section className="events-section beige-section">
+        <section className="beige-section">
           <div className="container">
-            <h2>Events</h2>
+            <h2>Upcoming Events</h2>
             <Calendar />
           </div>
         </section>
