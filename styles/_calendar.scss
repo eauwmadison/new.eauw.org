@@ -2,27 +2,52 @@
 
 .events {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-.event-date {
-  width: 15%;
+.event {
+  @extend .box;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: center;
-  line-height: normal;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-  .event-day {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
+.event-header {
+  padding: 16px;
+  border-bottom: 1px solid $color-ea-dark;
+}
 
-  .event-month {
-    text-transform: uppercase;
-    font-family: "Rockwell Nova", "Merriweather", Georgia, serif;
-    text-size-adjust: none;
-  }
+.event-title {
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.event-info {
+  font-size: 0.75em;
+}
+
+.event-info svg {
+  fill: $color-ea-dark;
+  margin-right: 0.5rem;
+  vertical-align: text-top;
+  width: 1em;
+  height: 1em;
+}
+
+.event-description {
+  font-size: 0.75em;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.event-type {
+  background: $color-ea-muted-blue;
+  font-size: 0.75em;
+  color: $white;
+  padding: 8px 16px;
 }
 
 .calendar-error {

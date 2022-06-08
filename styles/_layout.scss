@@ -1,4 +1,4 @@
-@import "_colors";
+@import "colors";
 
 body {
   margin: 0;
@@ -334,8 +334,7 @@ footer {
   position: relative;
 }
 
-.testimonial-message::before,
-.testimonial-message::after {
+.testimonial-message::before {
   content: " ";
   position: absolute;
   transform: translateY(-50%) rotate(45deg);

@@ -1,6 +1,6 @@
 @media (min-width: 960px) {
   .hover {
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 150ms;
   }
 
   .hover:hover {
