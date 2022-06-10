@@ -71,7 +71,11 @@ export default function Calendar() {
 
   if (data) {
     filteredEvents = data.items
-      .sort((a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime))
+      .sort(
+        (a, b) =>
+          new Date(a.start.dateTime || a.start.date) -
+          new Date(b.start.dateTime || b.start.date)
+      )
       .filter((event) => {
         const eventEnd = new Date(event.end.dateTime || event.end.date);
         return eventEnd > now && event.visibility !== "private";
