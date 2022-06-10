@@ -47,6 +47,7 @@ export default function Calendar() {
       </div>
     );
   }
+
   if (!data) {
     return (
       <>
@@ -63,25 +64,31 @@ export default function Calendar() {
       </>
     );
   }
-  if (data)
-    console.log(
-      data.items.sort(
-        (a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime)
-      )
-    );
 
   const now = new Date();
+
+  let filteredEvents = [];
+
+  if (data) {
+    filteredEvents = data.items
+      .sort((a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime))
+      .filter((event) => {
+        const eventEnd = new Date(event.end.dateTime || event.end.date);
+        return eventEnd > now && event.visibility !== "private";
+      })
+      .slice(0, 6);
+  }
 
   return (
     <>
       <div className="events">
-        {data.items
-          .sort(
-            (a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime)
-          )
-          .map((event, i) => {
+        {filteredEvents.length > 0 ? (
+          filteredEvents.map((event, i) => {
             return <Event event={event} key={i} />;
-          })}
+          })
+        ) : (
+          <div>No events for now.</div>
+        )}
       </div>
       <div className="time">
         Last updated{" "}
