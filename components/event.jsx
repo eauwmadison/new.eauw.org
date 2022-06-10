@@ -53,17 +53,18 @@ export default function Event({ event }) {
         data-tip="View in Google Calendar"
       >
         <div className="event hover">
-          {event.attachments[0] && (
-            <div className="event-image">
-              <img
-                src={
-                  "https://drive.google.com/uc?export=view&id=" +
-                  event.attachments[0].fileId
-                }
-                alt={event.attachments[0].title}
-              />
-            </div>
-          )}
+          {event.attachments[0] &&
+            event.attachments[0]?.mimeType.startsWith("image/") && (
+              <div className="event-image">
+                <img
+                  src={
+                    "https://drive.google.com/uc?export=view&id=" +
+                    event.attachments[0].fileId
+                  }
+                  alt={event.attachments[0].title}
+                />
+              </div>
+            )}
           <div className="event-header">
             <span className="event-title">{event.summary}</span>
             <div className="event-info">
