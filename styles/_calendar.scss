@@ -1,4 +1,5 @@
 @import "colors";
+@import "typography";
 
 .events {
   display: grid;
@@ -60,51 +61,20 @@
 }
 
 .event-tooltip {
+  font-family: $font-sans !important;
+  font-size: 0.65em !important;
   color: $color-ea-dark !important;
   line-height: initial !important;
   padding: 8px !important;
   border-radius: 4px !important;
   border: 1px solid $color-ea-dark !important;
   background-color: $color-ea-beige !important;
+}
 
-  &.place-right {
-    &:before {
-      border-right: 8px solid $color-ea-dark !important;
-    }
-
-    &:after {
-      border-right-color: $color-ea-beige !important;
-    }
-  }
-
-  &.place-left {
-    &:before {
-      border-left: 8px solid $color-ea-dark !important;
-    }
-
-    &:after {
-      border-left-color: $color-ea-beige !important;
-    }
-  }
-
-  &.place-top {
-    &:before {
-      border-top: 8px solid $color-ea-dark !important;
-    }
-
-    &:after {
-      border-top-color: $color-ea-beige !important;
-    }
-  }
-
-  &.place-bottom {
-    &:before {
-      border-bottom: 8px solid $color-ea-dark !important;
-    }
-
-    &:after {
-      border-bottom-color: $color-ea-beige !important;
-    }
+.event-tooltip-arrow {
+  &::before {
+    background-color: $color-ea-beige !important;
+    border: 1px solid $color-ea-dark !important;
   }
 }
 

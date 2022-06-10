@@ -47,17 +47,41 @@ export default function Calendar() {
       </div>
     );
   }
-  if (!data) return <div>Loading...</div>;
-  if (data) console.log(data.items);
+  if (!data) {
+    return (
+      <>
+        <div>Loading...</div>
+        <noscript>
+          <div className="calendar-error">
+            Please enable JavaScript to view events from our{" "}
+            <a href={siteData.site.google_calendar_share_link}>
+              Google Calendar
+            </a>{" "}
+            on this page.
+          </div>
+        </noscript>
+      </>
+    );
+  }
+  if (data)
+    console.log(
+      data.items.sort(
+        (a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime)
+      )
+    );
 
   const now = new Date();
 
   return (
     <>
       <div className="events">
-        <Event event={data.items[0]} />
-        <Event event={data.items[1]} />
-        <Event event={data.items[2]} />
+        {data.items
+          .sort(
+            (a, b) => new Date(a.start.dateTime) - new Date(b.start.dateTime)
+          )
+          .map((event, i) => {
+            return <Event event={event} key={i} />;
+          })}
       </div>
       <div className="time">
         Last updated{" "}

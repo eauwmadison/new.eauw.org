@@ -19,6 +19,9 @@
   font-style: normal;
 }
 
+$font-sans: "Cabin", "Aller", "Merriweather", "Ubuntu", sans-serif;
+$font-slab: "Rockwell Nova", "Roboto Slab" "Merriweather", Georgia, serif;
+
 html {
   font-size: 9px;
   -webkit-tap-highlight-color: transparent;
@@ -36,7 +39,7 @@ body {
 body,
 input,
 textarea {
-  font-family: "Cabin", "Aller", "Merriweather", "Ubuntu", sans-serif;
+  font-family: $font-sans;
   color: $color-ea-dark;
   text-rendering: geometricPrecision;
 }
@@ -48,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rockwell Nova", "Merriweather", Georgia, serif;
+  font-family: $font-slab;
   font-weight: 400;
 }
 
