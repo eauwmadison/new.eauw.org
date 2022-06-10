@@ -10,11 +10,11 @@ import Event from "./event";
 const fetcher = async (url) => {
   const res = await fetch(url);
 
-  // If the status code is not in the range 200-299,
+  // if the status code is not in the range 200–299,
   // we still try to parse and throw it.
   if (!res.ok) {
     const error = new Error("An error occurred while fetching the data.");
-    // Attach extra info to the error object.
+    // attach extra info to the error object.
     error.info = await res.json();
     error.status = res.status;
     throw error;
@@ -70,11 +70,12 @@ export default function Calendar() {
   let filteredEvents = [];
 
   if (data) {
+    // the first 6 non-private events which haven't ended
     filteredEvents = data.items
       .sort(
         (a, b) =>
           new Date(a.start.dateTime || a.start.date) -
-          new Date(b.start.dateTime || b.start.date)
+          new Date(b.start.dateTime || b.start.date) // .date for all-day
       )
       .filter((event) => {
         const eventEnd = new Date(event.end.dateTime || event.end.date);

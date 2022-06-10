@@ -10,6 +10,8 @@ export default function Event({ event }) {
   const hideTooltip = () => setTooltipOpen(false);
   const showTooltip = () => setTooltipOpen(true);
 
+  // for each `a` element in the event description,
+  // add mouse events to show/hide the tooltip
   const addMouseEventHandlers = (el) => {
     if (!el) return;
     el.querySelectorAll("a").forEach((child) => {
