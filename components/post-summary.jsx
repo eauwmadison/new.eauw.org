@@ -16,7 +16,7 @@ export default function PostSummary({ post }) {
 
       <div className="post-summary-content has-post-summary-image">
         <h3 className="post-summary-title">
-          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+          <Link href={`/posts/${post.slug}`}>{post.title}</Link>
         </h3>
 
         <PostSummaryDetails post={post} />

@@ -11,7 +11,7 @@ module.exports = withBundleAnalyzer({
     return config;
   },
   images: {
-    domains: ["placekitten.com", "placebear.com", "unsplash.it"],
+    domains: ["placekitten.com", "placebear.com", "unsplash.it", "localhost"],
     loader: "imgix",
     path: ""
   },
