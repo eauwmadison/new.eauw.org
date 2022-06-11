@@ -4,6 +4,16 @@ import { useState } from "react";
 import ManagedTooltip from "./managed-tooltip";
 import Icon from "./icon";
 
+// to check if event location is link
+const isURL = (str) => {
+  try {
+    new URL(str);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
 export default function Event({ event }) {
   const [tooltipOpen, setTooltipOpen] = useState(true);
 
@@ -33,7 +43,7 @@ export default function Event({ event }) {
       title={
         <span className="event-tooltip-child">
           View in Google Calendar
-          <Icon icon="Link" />
+          <Icon icon="Go" />
         </span>
       }
       arrow
@@ -76,7 +86,7 @@ export default function Event({ event }) {
                   year: "numeric"
                 })}
                 {eventStart.getDate() !== eventEnd.getDate() && (
-                  <span>
+                  <>
                     {" "}
                     &ndash;{" "}
                     {eventEnd.toLocaleDateString(undefined, {
@@ -84,18 +94,53 @@ export default function Event({ event }) {
                       day: "numeric",
                       year: "numeric"
                     })}
-                  </span>
+                  </>
                 )}
               </span>
+              {event.location && (
+                <span className="event-location">
+                  <Icon icon={isURL(event.location) ? "Link" : "Location"} />
+                  {isURL(event.location) ? (
+                    <a
+                      className="event-location-link"
+                      href={event.location}
+                      target="_blank"
+                      rel="noreferrer"
+                      onMouseOver={hideTooltip}
+                      onMouseOut={showTooltip}
+                    >
+                      {event.location}
+                    </a>
+                  ) : (
+                    event.location
+                  )}
+                </span>
+              )}
+              {event.start.dateTime && event.end.dateTime && (
+                <span className="event-time">
+                  <Icon icon="Time" />
+                  {eventStart.toLocaleTimeString(undefined, {
+                    hour: "numeric",
+                    minute: "2-digit"
+                  })}{" "}
+                  &ndash;{" "}
+                  {eventEnd.toLocaleTimeString(undefined, {
+                    hour: "numeric",
+                    minute: "2-digit"
+                  })}
+                </span>
+              )}
             </div>
           </div>
-          <div
-            ref={addMouseEventHandlers}
-            className="event-description"
-            dangerouslySetInnerHTML={{
-              __html: event.description || "No description"
-            }}
-          />
+          {event.description && (
+            <div
+              ref={addMouseEventHandlers}
+              className="event-description"
+              dangerouslySetInnerHTML={{
+                __html: event.description
+              }}
+            />
+          )}
           <div className="event-type">
             <span>Social</span>
           </div>
